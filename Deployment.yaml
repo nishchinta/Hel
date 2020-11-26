@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment #name of the microservice
+  labels:
+    app: spring
+spec:
+  replicas: 2 #tells deployment how many pods we want to create
+  selector:
+    matchLabels:
+      app: spring
+  template:
+    metadata:
+      labels:
+        app: spring
+    spec:
+      containers:
+      - name: spring
+        image: nishchinta/hellodocker:version2
+        ports:
+        - containerPort: 3000
