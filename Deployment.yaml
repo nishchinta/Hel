@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello
 spec:
-  replicas: 3 #tells deployment how many pods we want to create
+  replicas: 1 #tells deployment how many pods we want to create
   selector:
     matchLabels:
       app: hello
